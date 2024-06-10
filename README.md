@@ -1,2 +1,2 @@
-# Go-Compression-Tool
-Go-Compression-Tool
+# Compression-Tool
+Compression-Tool
