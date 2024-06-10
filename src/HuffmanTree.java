@@ -21,5 +21,21 @@ public class HuffmanTree {
         return pq.poll();
     }
 
+    public static HashMap<Character,String> generateCodes(HuffmanBaseNode root){
+        HashMap<Character,String> codesMap = new HashMap<>();
+        generateRecursiveCodes(root,"",codesMap);
+        return codesMap;
+    }
+
+    public static void generateRecursiveCodes(HuffmanBaseNode node, String code, HashMap<Character,String> codesMap){
+        if(node instanceof HuffmanLeafNode){
+            HuffmanLeafNode leaf = (HuffmanLeafNode) node;
+            codesMap.put(leaf.character,code);
+        }else if (node instanceof HuffmanInternalNode){
+            HuffmanInternalNode internalNode = (HuffmanInternalNode) node;
+            generateRecursiveCodes(internalNode.leftNode,code+"0",codesMap);
+            generateRecursiveCodes(internalNode.rightNode,code+"1",codesMap);
+        }
+    }
 
 }
