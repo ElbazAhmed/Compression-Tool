@@ -5,12 +5,9 @@ import java.util.HashMap;
 
 public class FrequencyTable {
 
-    public static HashMap<Character,Integer> getFrequencyTable(File file) throws IOException {
+    public static HashMap<Character,Integer> getFrequencyTable(String FileContent){
         HashMap<Character,Integer> freuencyMap = new HashMap<>();
-        FileReader reader = new FileReader(file);
-        int character;
-        while((character = reader.read()) != -1){
-            char c = (char) character;
+        for(char c : FileContent.toCharArray()){
             freuencyMap.put(c,freuencyMap.getOrDefault(c,0)+1);
         }
         return freuencyMap;

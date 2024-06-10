@@ -15,7 +15,8 @@ public class HuffmanCoding {
         File inputFile = new File(args[0]);
 
         try{
-            HashMap<Character,Integer> frequencyTable = FrequencyTable.getFrequencyTable(inputFile);
+            String FileContent = FileUtil.readFileContent(inputFile);
+            HashMap<Character,Integer> frequencyTable = FrequencyTable.getFrequencyTable(FileContent);
             // test the frequencyTable
             for(char c : frequencyTable.keySet()){
                 System.out.println("Character : "+ c +" Frequency : " + frequencyTable.get(c));
