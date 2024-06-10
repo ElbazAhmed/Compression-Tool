@@ -6,12 +6,12 @@ public class FileUtil {
 
     public static String readFileContent(File file) throws IOException {
         StringBuilder contentBuilder = new StringBuilder();
-        FileReader reader = new FileReader(file);
-        char character;
-        while((character = (char) reader.read()) != -1){
-            contentBuilder.append(character);
+        try (FileReader reader = new FileReader(file)) {
+            int character;
+            while ((character = reader.read()) != -1) {
+                contentBuilder.append((char) character);
+            }
         }
-        reader.close();
         return contentBuilder.toString();
     }
 
