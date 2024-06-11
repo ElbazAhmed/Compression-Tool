@@ -17,15 +17,31 @@ The tool takes a text file as input, builds a frequency table for the characters
 
 ## Project Structure
 
-- **HuffmanCoding.java**: The main class to run the compression and decompression process.
-- **FrequencyTable.java**: Contains methods to generate the frequency table.
-- **FileUtil.java**: Utility class to read file content.
-- **HuffmanBaseNode.java**: Abstract base class for Huffman tree nodes.
-- **HuffmanInternalNode.java**: Represents internal nodes in the Huffman tree.
-- **HuffmanLeafNode.java**: Represents leaf nodes in the Huffman tree.
-- **HuffmanTree.java**: Contains methods to build the Huffman tree and generate codes.
-- **HuffmanEncoder.java**: Contains the method to compress the text data.
-- **HuffmanDecoder.java**: Contains the method to decompress the text data.
+The directory structure of the project is as follows:
+
+```bash
+Compression-Tool/
+├── .idea/                     
+├── out/                       # Output directory for compiled classes
+├── src/                       # Source directory containing the Java source files
+│   ├── Ressources/            # Contains text files used for compression and decompression tests
+│   │   ├── compressed.txt     # Stores compressed data
+│   │   ├── decompressed.txt   # Stores decompressed data
+│   │   ├── test.txt           # Sample input file for testing compression and decompression
+│   ├── FileUtil.java          # Utility class to read file content
+│   ├── FrequencyTable.java    # Contains methods to generate the frequency table
+│   ├── HuffmanBaseNode.java   # Abstract base class for Huffman tree nodes
+│   ├── HuffmanCoding.java     # The main class to run the compression and decompression process
+│   ├── HuffmanDecoder.java    # Contains the method to decompress the text data
+│   ├── HuffmanEncoder.java    # Contains the method to compress the text data
+│   ├── HuffmanInternalNode.java # Represents internal nodes in the Huffman tree
+│   ├── HuffmanLeafNode.java   # Represents leaf nodes in the Huffman tree
+│   ├── HuffmanTree.java       # Contains methods to build the Huffman tree and generate codes
+├── .gitignore                 
+├── Compression-Tool.iml      
+├── README.md                 
+└── External Libraries/        
+```
 
 ## How to Use
 
